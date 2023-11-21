@@ -1,0 +1,42 @@
+1. Create All Data Dictionaries
+Start by defining the basic data structures for your musical elements:
+
+Scales: List or dictionary of all scales.
+Chord Progressions: List or dictionary of chord progressions, potentially categorized by scale or style.
+Instruments: List or dictionary of instruments, potentially categorized by genre or other factors.
+Moods: List or dictionary of moods/emotions and their musical representations.
+Genres: Simple list or dictionary of genres.
+This foundational data will serve as the building blocks for your program.
+
+2. Develop genre_logic.py
+Once your basic data dictionaries are in place, you can create the genre_logic.py file. This file will contain the logic that connects each genre to the appropriate scales, chord progressions, instruments, etc.
+
+For example:
+
+Define which scales are commonly used in each genre.
+Determine typical chord progressions for each genre.
+List preferred instruments for each genre.
+This file essentially acts as a bridge between the raw data and the more complex operations of your program.
+
+3. Create randomizer.py
+Finally, develop the randomizer.py module. This module will use the logic and data from your previous files to randomly generate coherent musical ideas.
+
+It should interact with genre_logic.py to ensure that the random selections of scales, chord progressions, and instruments are appropriate for the randomly selected genre.
+It may also incorporate moods into the randomization process, selecting elements that fit both the genre and the mood.
+By following this order, you ensure that each component of your program is built upon a solid and well-defined foundation. 
+It allows for more manageable development and testing phases, as each part of your program can be independently verified for correctness before integrating it into the larger system. Additionally, this approach provides clear separation between data (your dictionaries), business logic (genre_logic.py), and application functionality (randomizer.py), aligning well with good software development practices.
+
+
+My_Music_Program/
+│
+├── main.py                # Main script or module for program execution
+├── randomizer.py          # Contains logic for randomizing musical elements
+├── genre_logic.py         # Contains logic connecting genres with scales, chords, etc.
+├── utility.py             # Utility functions, including lowercase conversion
+└── data/                  # Directory containing data dictionaries
+    ├── __init__.py        # Makes 'data' a Python package
+    ├── scales.py          # Contains scales data
+    ├── chord_progressions.py  # Contains chord progressions data
+    ├── instruments.py     # Contains instruments data
+    ├── genres.py          # Contains genre data
+    └── moods.py           # Contains moods data
